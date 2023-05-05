@@ -1,0 +1,9 @@
+---
+- name: Operating system update
+  hosts: all
+  become: yes
+
+
+  roles:
+  - upgrade_system
+    

@@ -1,0 +1,10 @@
+---
+# tasks file for upgrade_system
+  
+- name: Upgrade all packages, excluding kernel & foo related packages
+  yum:
+    name: '*'
+    state: latest
+    exclude: kernel*,foo*
+  notify: Reboot host
+  when: ansible_os_family == "RedHat"
