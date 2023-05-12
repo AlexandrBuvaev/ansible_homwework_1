@@ -1,5 +1,5 @@
 ---
 # handlers file for upgrade_system
 
-- name: Reboot servers
+- name: Reboot host
   reboot:
